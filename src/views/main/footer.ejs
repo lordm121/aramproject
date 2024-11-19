@@ -1,0 +1,144 @@
+  
+<!-- MDI Icons -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Notifications Section -->
+        <div class="text-center md:text-left" id="notification-prompt">
+          <h3 class="text-xl font-semibold mb-4">ئاگادارکردنەوەکان</h3>
+          <div class="bg-gray-700 p-4 rounded-lg mb-4">
+            <p class="mb-2">کلیک لەم دوگمەیە بکە بۆ ئاگاداربوون لە زیادکراوەکان</p>
+            <button id="enable-notifications" class=" bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition duration-300">
+              چالاککردنی ئاگادارکردنەوەکان
+            </button>
+          </div>
+        </div>
+        
+        <!-- Download Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-semibold mb-4">دابەزاندنی بەرنامەکە</h3>
+          <div class="bg-gray-700 p-4 rounded-lg mb-4">
+            <p class="mb-2">کلیک لەم دوگمەیە بکە بۆ دابەزاندنی بەرنامەکە</p>
+            <a href="/download" class="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">
+              دابەزاندنی APK
+            </a>
+          </div>
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-semibold mb-4">            پەیوەندی ڕاستەوخۆ
+          </h3>
+          <div class="bg-gray-700 p-4 rounded-lg mb-4">
+            <p class="mb-2">کلیک لەم دوگمەیە بکە </p>
+            <a href="/contact-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition duration-300">
+  پەیوەندی کردن بە فۆڕمی ڕاستەوخۆ          </a>
+          </div>
+        </div>
+        
+      </div>
+  
+       <!-- Social Media & Contact -->
+       <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">پەیوەندی</h3>
+        <div class="flex justify-center  space-x-4 mb-4">
+          <a href="/facebook" class="text-white hover:text-gray-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+       
+          <a href="/telegram" class="text-white hover:text-gray-300 text-xl"><i class="fab fa-telegram"></i></a>
+          <a href="/instagram" class="text-white hover:text-gray-300 text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+        <p>&copy; 2023 Medical&Health. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- <script src="/js/sw.js"></script>
+  <script src="/js/notification.js"></script> -->
+  
+  <!-- <script>
+  (function() {
+  
+    const searchInput = document.getElementById('search-input');
+    const suggestionList = document.getElementById('search-suggestions');
+  
+    searchInput.addEventListener('input', async (event) => {
+      const inputValue = event.target.value.trim();
+      if (inputValue.length > 0) {
+        const suggestions = await fetchSuggestions(inputValue);
+        renderSuggestions(suggestions, inputValue);
+      } else {
+        clearSuggestions();
+      }
+    });
+  
+    async function fetchSuggestions(query) {
+      try {
+        const response = await fetch(`/api/search/suggestions?query=${encodeURIComponent(query)}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return await response.json();
+      } catch (error) {
+        console.error('Error fetching suggestions:', error);
+        return [];
+      }
+    }
+  
+    function renderSuggestions(suggestions, inputValue) {
+      clearSuggestions();
+      if (suggestions.length === 0) {
+        suggestionList.innerHTML = '<li class="p-2">No suggestions found</li>';
+        return;
+      }
+  
+      suggestions.forEach(suggestion => {
+        const li = document.createElement('li');
+        li.classList.add('p-2', 'hover:bg-gray-100', 'cursor-pointer');
+        
+        let displayText = '';
+        let url = '';
+        
+        switch (suggestion.type) {
+          case 'drug':
+            displayText = suggestion.generic_name || suggestion.brand_name;
+            url = `/drugs/${suggestion.id}`;
+            break;
+          case 'disease':
+            displayText = suggestion.disease_name;
+            url = `/diseases/${suggestion.id}`;
+            break;
+          case 'medicinfo':
+            displayText = suggestion.name;
+            url = `/medicalinfo/${suggestion.id}`;
+            break;
+          case 'vitamin':
+            displayText = suggestion.name || suggestion.chemical_name;
+            url = `/vitamins/${suggestion.id}`;
+            break;
+        }
+   
+//         const highlightedText = highlightMatch(displayText, inputValue);
+//         li.innerHTML = `<a href="${url}">${highlightedText}</a>`;
+        
+//         li.addEventListener('click', () => {
+//           window.location.href = url;
+//         });
+  
+//         suggestionList.appendChild(li);
+//       });
+//     }
+  
+//     function clearSuggestions() {
+//       suggestionList.innerHTML = '';
+//     }
+  
+//     function highlightMatch(text, query) {
+//       const regex = new RegExp(`(${query})`, 'gi');
+//       return text.replace(regex, '<strong>$1</strong>');
+//     }
+//   })();
+//   </script>-->
+  </body>
+  </html>

@@ -1,0 +1,6 @@
+{
+    "watch": ["src/views/", "src/public/", "src/public/css/", "src/routes/", "src/"],
+    "ext": "js,json,ejs,css",
+    "delay": "500"
+  }
+  

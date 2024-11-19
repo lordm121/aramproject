@@ -1,0 +1,24 @@
+{
+  "name": "aramproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "author": "aram",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express-minify-html-terser": "^1.0.2",
+    "express-session": "^1.18.1",
+    "http": "^0.0.1-security",
+    "moment": "^2.30.1",
+    "mongoose": "^8.8.2",
+    "node-schedule": "^2.1.1"
+  }
+}
